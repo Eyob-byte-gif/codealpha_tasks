@@ -46,7 +46,7 @@ while True:
         print("Attempts remaining:", remaining_attempts)
 
         if wrong_guesses >= 6:
-            print("Game over! 😥")
+            print("Game over! You lost 😥")
             print("The word was:", word)
             break
 
