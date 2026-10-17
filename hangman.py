@@ -1,55 +1,117 @@
+
 import random
 
-words = ["PYTHON", "COMPUTER", "PROGRAM", "CODING", "SOFTWARE"]
+WORDS = ["PYTHON", "COMPUTER", "PROGRAM", "CODING", "SOFTWARE"]
 
-word = random.choice(words)
+HANGMAN_STAGES = [
+    """
+     +---+
+     |   |
+         |
+         |
+         |
+    =========
+    """,
+    """
+     +---+
+     |   |
+     O   |
+         |
+         |
+    =========
+    """,
+    """
+     +---+
+     |   |
+     O   |
+     |   |
+         |
+    =========
+    """,
+    """
+     +---+
+     |   |
+     O   |
+    /|   |
+         |
+    =========
+    """,
+    """
+     +---+
+     |   |
+     O   |
+    /|\\  |
+         |
+    =========
+    """,
+    """
+     +---+
+     |   |
+     O   |
+    /|\\  |
+    /    |
+    =========
+    """,
+    """
+     +---+
+     |   |
+     O   |
+    /|\\  |
+    / \\  |
+    =========
+    """
+]
 
-guessed_letters = []
-wrong_guesses = 0
 
-display = []
+def play_game():
+    word = random.choice(WORDS)
+    guessed_letters = []
+    wrong_guesses = 0
+    display = ["_"] * len(word)
 
-for letter in word:
-    display.append("_")
+    print("\nWelcome to Hangman!")
+    print("Guess the hidden word one letter at a time.")
+    print(f"The word has {len(word)} letters.")
 
-print("Welcome to Hangman!")
-print("The word has", len(word), "letters.")
-print(" ".join(display))
+    while True:
+        print(HANGMAN_STAGES[wrong_guesses])
+        print("Word:", " ".join(display))
+        print("Guessed letters:", ", ".join(guessed_letters) or "None")
+        print(f"Attempts remaining: {6 - wrong_guesses}")
 
-while True:
-    guess = input("Guess a letter: ").upper()
+        guess = input("Guess a letter: ").strip().upper()
 
-    if len(guess) != 1 or not guess.isalpha():
-        print("Invalid guess! Enter one letter.")
-        continue
+        if len(guess) != 1 or not guess.isalpha():
+            print("Invalid guess! Enter one letter.")
+            continue
 
-    if guess in guessed_letters:
-        print("You already guessed that letter!")
-        continue
+        if guess in guessed_letters:
+            print("You already guessed that letter!")
+            continue
 
-    guessed_letters.append(guess)
+        guessed_letters.append(guess)
 
-    if guess in word:
-        print("Correct! 🎉")
+        if guess in word:
+            print("Correct!")
+            for i, letter in enumerate(word):
+                if letter == guess:
+                    display[i] = guess
+        else:
+            print("Wrong guess!")
+            wrong_guesses += 1
 
-        for i in range(len(word)):
-            if word[i] == guess:
-                display[i] = guess
-
-        print(" ".join(display))
-
-    else:
-        print("Wrong guess!")
-        wrong_guesses += 1
-
-        remaining_attempts = 6 - wrong_guesses
-        print("Attempts remaining:", remaining_attempts)
-
-        if wrong_guesses >= 6:
-            print("Game over! You lost 😥")
+        if "_" not in display:
+            print("\nCongratulations! You guessed the word!")
             print("The word was:", word)
             break
 
-    if "_" not in display:
-        print("Congratulations! You guessed the word! 🎉")
-        break
+        if wrong_guesses == 6:
+            print(HANGMAN_STAGES[wrong_guesses])
+            print("\nGame over! You lost.")
+            print("The word was:", word)
+            break
+
+
+if __name__ == "__main__":
+    play_game()
+
