@@ -1,30 +1,59 @@
+
 # CodeAlpha Hangman Game
 
-## Description
-A simple text-based Hangman game built with Python as part of the CodeAlpha Python Programming Internship.
+A command-line Hangman game built with Python as part of my CodeAlpha Python Programming Internship.
 
 ## Objective
-Guess the hidden word one letter at a time. You can make up to six incorrect guesses before the game ends.
+
+The goal is to guess a hidden word one letter at a time before running out of attempts.
 
 ## Features
-- Randomly selects one of five predefined words.
-- Allows up to six incorrect guesses.
-- Validates user input.
-- Prevents repeated guesses.
-- Displays correctly guessed letters.
-- Announces whether the player wins or loses.
 
-## Requirements
-- Python 3
+- Random word selection
+- Visual Hangman stages
+- Input validation
+- Duplicate-guess detection
+- Six incorrect attempts allowed
+- Win and lose messages
+- Option to play multiple rounds
+- Automated tests using Python's unittest framework
+
+## Technologies Used
+
+- Python
+- random module
+- unittest
+- Git and GitHub
 
 ## How to Run
-1. Open a terminal.
-2. Navigate to the project directory.
-3. Run:
 
-   `python hangman.py`
+Make sure Python 3 is installed.
 
-## Technologies
-- Python
-- `random` module
-- Lists, loops, conditionals, and strings
+```bash
+python hangman.py
+```
+
+## Run Automated Tests
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+## Project Structure
+
+```text
+CodeAlpha_Hangman/
+├── hangman.py
+├── README.md
+└── tests/
+    └── test_hangman.py
+```
+
+## What I Practiced
+
+This project helped me practice Python loops, conditional statements, lists, functions, user input validation, exception-free control flow, and automated testing.
+
+## Internship
+
+Developed as part of the CodeAlpha Python Programming Internship.
+
