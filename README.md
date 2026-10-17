@@ -1,59 +1,58 @@
+CodeAlpha Python Programming Internship — Tasks
 
-# CodeAlpha Hangman Game
+This repository contains three Python projects completed as part of my CodeAlpha Python Programming Internship.
 
-A command-line Hangman game built with Python as part of my CodeAlpha Python Programming Internship.
+Task 1: Hangman Game
 
-## Objective
+A command-line word-guessing game featuring random word selection, visual Hangman stages, input validation, duplicate-guess detection, six incorrect attempts, and replay functionality.
 
-The goal is to guess a hidden word one letter at a time before running out of attempts.
+Folder: "./"
 
-## Features
+Run:
 
-- Random word selection
-- Visual Hangman stages
-- Input validation
-- Duplicate-guess detection
-- Six incorrect attempts allowed
-- Win and lose messages
-- Option to play multiple rounds
-- Automated tests using Python's unittest framework
+python hangman.py
 
-## Technologies Used
+Tests:
+
+python -m unittest discover -s tests -v
+
+Task 2: Stock Portfolio Tracker
+
+A command-line application for managing a stock portfolio, recording quantities and prices, calculating investment totals, and saving portfolio data.
+
+Folder: "StockPortfolio/"
+
+Run:
+
+cd StockPortfolio
+python stock_portfolio.py
+
+Tests:
+
+python -m unittest discover -s StockPortfolio/tests -v
+
+Task 3: File Organizer Automation
+
+A Python utility that organizes files into category-based folders, including images, documents, videos, audio, archives, code, and other files.
+
+Folder: "FileOrganizer/"
+
+Run:
+
+cd FileOrganizer
+python file_organizer.py
+
+Tests:
+
+python -m unittest discover -s FileOrganizer/tests -v
+
+Technologies
 
 - Python
-- random module
-- unittest
+- Python standard library
+- "unittest"
 - Git and GitHub
 
-## How to Run
+Internship
 
-Make sure Python 3 is installed.
-
-```bash
-python hangman.py
-```
-
-## Run Automated Tests
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-## Project Structure
-
-```text
-CodeAlpha_Hangman/
-├── hangman.py
-├── README.md
-└── tests/
-    └── test_hangman.py
-```
-
-## What I Practiced
-
-This project helped me practice Python loops, conditional statements, lists, functions, user input validation, exception-free control flow, and automated testing.
-
-## Internship
-
-Developed as part of the CodeAlpha Python Programming Internship.
-
+Projects developed for the CodeAlpha Python Programming Internship.
