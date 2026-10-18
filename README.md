@@ -1,10 +1,10 @@
 CodeAlpha Python Programming Internship — Tasks
 
-This repository contains three Python projects developed during my CodeAlpha Python Programming Internship. Each project includes source code, documentation, and automated tests where applicable.
+This repository contains three Python projects developed during my CodeAlpha Python Programming Internship. Each project focuses on a practical programming task and includes source code, documentation, and automated tests.
 
 Task 1: Hangman Game
 
-A command-line word-guessing game with random word selection, visual Hangman stages, input validation, duplicate-guess detection, six incorrect attempts, and replay functionality.
+A command-line word-guessing game featuring random word selection, visual Hangman stages, input validation, duplicate-guess detection, six incorrect attempts, and replay functionality.
 
 Run the game:
 
@@ -18,48 +18,52 @@ Task 2: Stock Portfolio Tracker
 
 A command-line application for managing stock holdings, recording quantities and manually provided prices, calculating portfolio investment totals, and saving portfolio data.
 
-Project folder: "StockPortfolio/"
-
 Run the application:
 
-cd StockPortfolio
-python stock_portfolio.py
+python StockPortfolio/stock_portfolio.py
 
-Run the tests from the repository root:
+Run the tests:
 
 python -m unittest discover -s StockPortfolio/tests -v
 
-Note: The application uses stored or manually entered prices, not live stock-market data.
+Note: The application uses stored or manually entered prices rather than live stock-market data.
 
 Task 3: File Organizer Automation
 
 A Python utility that organizes files into category-based folders, including images, documents, videos, audio, archives, code, and other files.
 
-Project folder: "FileOrganizer/"
-
 Run the application:
 
-cd FileOrganizer
-python file_organizer.py
+python FileOrganizer/file_organizer.py
 
-Run the tests from the repository root:
+Run the tests:
 
 python -m unittest discover -s FileOrganizer/tests -v
 
 Repository Structure
 
 codealpha_tasks/
-├── hangman.py
-├── tests/
+├── Hangman/
+│   ├── hangman.py
+│   └── tests/
+│       └── test_hangman.py
+│
 ├── StockPortfolio/
 │   ├── stock_portfolio.py
-│   └── tests/
+│   ├── tests/
+│   │   └── test_stock_portfolio.py
+│   ├── README.md
+│   └── .gitignore
+│
 ├── FileOrganizer/
 │   ├── file_organizer.py
-│   └── tests/
-└── README.md
-
-Each project folder also contains its own README and ".gitignore" file.
+│   ├── tests/
+│   │   └── test_file_organizer.py
+│   ├── README.md
+│   └── .gitignore
+│
+├── README.md
+└── .gitignore
 
 Technologies Used
 
