@@ -8,11 +8,11 @@ A command-line word-guessing game with random word selection, visual Hangman sta
 
 Run the game:
 
-python hangman.py
+python Hangman/hangman.py
 
 Run the tests:
 
-python -m unittest discover -s tests -v
+python -m unittest discover -s Hangman/tests -v
 
 Task 2: Stock Portfolio Tracker
 
