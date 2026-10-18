@@ -41,7 +41,7 @@ Run the tests:
 python -m unittest discover -s FileOrganizer/tests -v
 
 Repository Structure
-
+```text
 codealpha_tasks/
 ├── Hangman/
 │   ├── hangman.py
@@ -64,7 +64,7 @@ codealpha_tasks/
 │
 ├── README.md
 └── .gitignore
-
+```
 Technologies Used
 
 - Python
