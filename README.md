@@ -1,58 +1,73 @@
 CodeAlpha Python Programming Internship — Tasks
 
-This repository contains three Python projects completed as part of my CodeAlpha Python Programming Internship.
+This repository contains three Python projects developed during my CodeAlpha Python Programming Internship. Each project includes source code, documentation, and automated tests where applicable.
 
 Task 1: Hangman Game
 
-A command-line word-guessing game featuring random word selection, visual Hangman stages, input validation, duplicate-guess detection, six incorrect attempts, and replay functionality.
+A command-line word-guessing game with random word selection, visual Hangman stages, input validation, duplicate-guess detection, six incorrect attempts, and replay functionality.
 
-Folder: "./"
-
-Run:
+Run the game:
 
 python hangman.py
 
-Tests:
+Run the tests:
 
 python -m unittest discover -s tests -v
 
 Task 2: Stock Portfolio Tracker
 
-A command-line application for managing a stock portfolio, recording quantities and prices, calculating investment totals, and saving portfolio data.
+A command-line application for managing stock holdings, recording quantities and manually provided prices, calculating portfolio investment totals, and saving portfolio data.
 
-Folder: "StockPortfolio/"
+Project folder: "StockPortfolio/"
 
-Run:
+Run the application:
 
 cd StockPortfolio
 python stock_portfolio.py
 
-Tests:
+Run the tests from the repository root:
 
 python -m unittest discover -s StockPortfolio/tests -v
+
+Note: The application uses stored or manually entered prices, not live stock-market data.
 
 Task 3: File Organizer Automation
 
 A Python utility that organizes files into category-based folders, including images, documents, videos, audio, archives, code, and other files.
 
-Folder: "FileOrganizer/"
+Project folder: "FileOrganizer/"
 
-Run:
+Run the application:
 
 cd FileOrganizer
 python file_organizer.py
 
-Tests:
+Run the tests from the repository root:
 
 python -m unittest discover -s FileOrganizer/tests -v
 
-Technologies
+Repository Structure
+
+codealpha_tasks/
+├── hangman.py
+├── tests/
+├── StockPortfolio/
+│   ├── stock_portfolio.py
+│   └── tests/
+├── FileOrganizer/
+│   ├── file_organizer.py
+│   └── tests/
+└── README.md
+
+Each project folder also contains its own README and ".gitignore" file.
+
+Technologies Used
 
 - Python
 - Python standard library
-- "unittest"
+- "unittest" for automated testing
 - Git and GitHub
 
 Internship
 
-Projects developed for the CodeAlpha Python Programming Internship.
+Developed as part of the CodeAlpha Python Programming Internship.
